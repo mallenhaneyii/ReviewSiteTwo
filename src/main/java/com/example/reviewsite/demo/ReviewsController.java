@@ -16,7 +16,7 @@ public class ReviewsController {
     @RequestMapping("/reviews")
     public String finalAllReviews(Model model) {
         model.addAttribute("reviewsModel", reviewRepo.findAll());
-        return "reviewsTemplate";
+        return "homeTemplate";
     }
 
     @RequestMapping("/review")

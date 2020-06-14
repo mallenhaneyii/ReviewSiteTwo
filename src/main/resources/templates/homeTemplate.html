@@ -16,7 +16,7 @@
         <main>
 
             <p th:each="review: ${reviewsModel}"><a th:href="@{/review(id=${review.id})}"> <img
-                        th:src="${review.imageUrl}" alt="image" height="300"></a>
+                        th:src="${review.imageUrl}"></a>
             </p>
 
         </main>

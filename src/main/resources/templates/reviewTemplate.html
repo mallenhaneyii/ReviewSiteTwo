@@ -3,7 +3,7 @@
 
 <head>
     <title th:text="${reviewModel.reviewTitle}">A review</title>
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/reviewstyle.css">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
 
         <main>
             <h2 th:text="${reviewModel.reviewTitle}"></h2>
-            <img th:src="${reviewModel.imageUrl}" alt="image" height="300">
+            <img th:src="${reviewModel.imageUrl}">
             <h2>Infinity Saga</h2>
             <h2 th:text="${reviewModel.reviewCategory}"></h2>
             <div class="content">
