@@ -1,27 +1,39 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <title th:text="${reviewModel.reviewTitle}">A course</title>
+    <title th:text="${reviewModel.reviewTitle}">A review</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
+
 <body>
 
-<header>
-    <h1 th:text="${reviewModel.reviewTitle}">A Course</h1>
-</header>
+    <nav>
+        <a href="/reviews">Reviews</a>
+    </nav>
 
-<main>
-    <ul>
-        <p><a href="/reviews">Courses</a></p>
-        <li th:text="${reviewModel.reviewTitle}"></li>
-        <li th:text="${reviewModel.imageUrl}"></li>
-        <li th:text="${reviewModel.reviewCategory}"></li>
-        <li th:text="${reviewModel.reviewContent}"></li>
-    </ul>
-</main>
+    <div class="container">
 
-<footer>
-    <small>&copy wcci 2020</small>
-</footer>
+        <header>
+            <h1> Marvel Reviews </h1>
+        </header>
+
+        <main>
+            <h2 th:text="${reviewModel.reviewTitle}"></h2>
+            <img th:src="${reviewModel.imageUrl}" alt="image" height="300">
+            <h2>Infinity Saga</h2>
+            <h2 th:text="${reviewModel.reviewCategory}"></h2>
+            <div class="content">
+                <p th:text="${reviewModel.reviewContent}"></p>
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <small>&copy Team Two 2020</small>
+    </footer>
 
 </body>
+
 </html>

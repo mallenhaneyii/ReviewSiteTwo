@@ -1,23 +1,32 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <title>A List of All Available Reviews</title>
+    <title>Why Cliff Is Wrong</title>
+    <link rel="stylesheet" type="text/css" href="./css/homestyle.css">
 </head>
+
 <body>
 
-<header>
-    <h1>A List of All Reviews</h1>
-</header>
+    <header>
+        <h1>Why Cliff Is Wrong</h1>
+    </header>
 
-<main>
-    <ul>
-        <li th:each="review: ${reviewsModel}"><a th:href="@{/review(id=${review.id})}" th:text="${review.reviewTitle}"></a></li>
-    </ul>
-</main>
+    <div class="container">
+        <main>
 
-<footer>
-    <small>&copy wcci 2020</small>
-</footer>
+            <p th:each="review: ${reviewsModel}"><a th:href="@{/review(id=${review.id})}"> <img
+                        th:src="${review.imageUrl}" alt="image" height="300"></a>
+            </p>
+
+        </main>
+
+    </div>
+
+    <footer>
+        <small>&copy Team Two 2020</small>
+    </footer>
 
 </body>
+
 </html>
