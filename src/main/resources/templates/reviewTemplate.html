@@ -8,31 +8,29 @@
 
 <body>
 
+<div class="container">
+
     <nav>
-        <a href="/reviews">Reviews</a>
+        <a href="/reviews">
+            <img src="images\title.jpg"></a>
     </nav>
 
-    <div class="container">
+    <main>
+        <h2 th:text="${reviewModel.reviewTitle}"></h2>
+        <img th:src="${reviewModel.imageUrl}">
+        <p th:text="${reviewModel.releaseYear}"></p>
+        <h2>Infinity Saga</h2>
+        <h2 th:text="${reviewModel.reviewCategory}"></h2>
+        <div class="content">
+            <p th:text="${reviewModel.reviewContent}"></p>
+        </div>
 
-        <header>
-            <h1> Marvel Reviews </h1>
-        </header>
+    </main>
+</div>
 
-        <main>
-            <h2 th:text="${reviewModel.reviewTitle}"></h2>
-            <img th:src="${reviewModel.imageUrl}">
-            <h2>Infinity Saga</h2>
-            <h2 th:text="${reviewModel.reviewCategory}"></h2>
-            <div class="content">
-                <p th:text="${reviewModel.reviewContent}"></p>
-            </div>
-
-        </main>
-    </div>
-
-    <footer>
-        <small>&copy Team Two 2020</small>
-    </footer>
+<footer>
+    <small>&copy Team Two 2020</small>
+</footer>
 
 </body>
 

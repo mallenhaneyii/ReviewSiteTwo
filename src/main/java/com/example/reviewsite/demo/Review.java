@@ -6,13 +6,15 @@ public class Review {
     private String reviewTitle;
     private String imageUrl;
     private String reviewCategory;
+    private String releaseYear;
     private String reviewContent;
 
-    public Review(Long id, String reviewTitle, String imageUrl, String reviewCategory, String reviewContent){
+    public Review(Long id, String reviewTitle, String imageUrl, String reviewCategory, String releaseYear, String reviewContent){
         this.id = id;
         this.reviewTitle = reviewTitle;
         this.imageUrl = imageUrl;
         this.reviewCategory = reviewCategory;
+        this.releaseYear = releaseYear;
         this.reviewContent = reviewContent;
     }
 
@@ -55,5 +57,9 @@ public class Review {
     public void setReviewContent(String reviewContent) {
         this.reviewContent = reviewContent;
     }
+
+    public String getReleaseYear() {return releaseYear;}
+
+    public void setReleaseYear(String releaseYear) { this.releaseYear = releaseYear; }
 
 }

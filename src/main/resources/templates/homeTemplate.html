@@ -8,11 +8,12 @@
 
 <body>
 
-    <header>
-        <h1>Why Cliff Is Wrong</h1>
-    </header>
-
     <div class="container">
+
+        <header>
+            <h1><img src="images\title.jpg"></h1>
+        </header>
+
         <main>
 
             <p th:each="review: ${reviewsModel}"><a th:href="@{/review(id=${review.id})}"> <img
